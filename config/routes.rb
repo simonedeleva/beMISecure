@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'home/welcome'
+root "home#welcome"
+  resource :users
   resources :users
   resources :stations
   resources :chains
