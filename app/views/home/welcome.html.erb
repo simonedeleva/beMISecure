@@ -1,6 +1,6 @@
-<h1>BeMIsecure</h1>
-<p id="notice"><%= notice %></p>
-<p>Find me in app/views/home/welcome.html.erb</p>
+<% if current_user.nil? %>
+<h1><%="BeMIsecure" %></h1>
+<% end %>
 
 <% if !current_user.nil? %>
 <h1><%="Benvenuto "+current_user.name %></h1>
@@ -11,4 +11,7 @@
 <p><%= link_to 'Accedi', new_user_session_path %></p>
 <p><%=link_to 'Registrati', new_user_registration_path %></p>
 <% end %>
+
+<p id="notice"><%= notice %></p>
+<p>Find me in app/views/home/welcome.html.erb</p>
 
