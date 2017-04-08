@@ -1,9 +1,10 @@
+<% if current_user.nil? %>
+<h1>BeMISecure</h1>
+<% end %>
 
-<h1>Home#welcome</h1>
-<p id="notice"><%= notice %></p>
-<p>Find me in app/views/home/welcome.html.erb</p>
 <% if !current_user.nil? %>
-<%=    "benvenuto " + current_user.name + " " + current_user.surname + " (" + current_user.email + ")" %>
+<h1><%= "Benvenuto " + current_user.name %></h1>
+<h3><%= "Ciao dal team di BeMISecure!" %></h3>
 <p>  <%= link_to('Modifica profilo', edit_user_registration_path) %></p>
 <p><%= link_to 'Le stazioni di BeMISecure', stations_path %></p>
 <p>  <%= link_to('Esci', destroy_user_session_path, :method => :delete) %></p>
@@ -11,3 +12,6 @@
 <p><%= link_to 'Accedi', new_user_session_path %></p>
 <p><%= link_to 'Registrati', new_user_registration_path %></p>
 <% end %>
+
+<p id="notice"><%= notice %></p>
+<p>Find me in app/views/home/welcome.html.erb</p>
