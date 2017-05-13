@@ -1,16 +1,17 @@
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 <% if current_user.nil? %>
-<h1>BeMISecure</h1>
+<div class="jumbotron text-center"><h1>BeMISecure</h1></div>
 <% end %>
-
-<% if !current_user.nil? %>
+</div>
+<div class="jumbotron text-center"><% if !current_user.nil? %>
 <h1><%= "Benvenuto " + current_user.name %></h1>
-<h3><%= "Ciao dal team di BeMISecure!" %></h3>
-<p>  <%= link_to('Modifica profilo', edit_user_registration_path) %></p>
+<h3><%= "Ciao dal team di BeMISecure!" %></h3></div>
+<div class="jumbotron text-center"><p>  <%= link_to('Modifica profilo', edit_user_registration_path) %></p>
 <p><%= link_to 'Le stazioni di BeMISecure', stations_path %></p>
 <p>  <%= link_to('Esci', destroy_user_session_path, :method => :delete) %></p>
 <% else %>
 <p><%= link_to 'Accedi', new_user_session_path %></p>
-<p><%= link_to 'Registrati', new_user_registration_path %></p>
+<p><%= link_to 'Registrati', new_user_registration_path %></p></div>
 <% end %>
 
 <p id="notice"><%= notice %></p>
