@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :parkings
   root "home#welcome"
   devise_for :users
   resources :users

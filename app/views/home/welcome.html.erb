@@ -3,10 +3,14 @@
  <div class="hero__image">
     <img src="<%= asset_path "heroimage4.jpg" %>" alt="test" class="img-responsive">
     <div class="carousel-caption">
-       <h1>Lorem ipsum set ardor</h1>
+       <h1>BeMISecure</h1>
+       
        <% if current_user.nil? %>       
         <p><%= link_to 'Registrati adesso', new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
        <% end %>
+       <% if !current_user.nil? %>
+       <h2><%="Benvenuto " + current_user.name %></h2>
+        <% end %>
     </div>
  </div>
  <p></p>

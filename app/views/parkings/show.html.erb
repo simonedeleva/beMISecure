@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parkrequest:</strong>
+  <%= @parking.parkrequest %>
+</p>
+
+<p>
+  <strong>Parkallowed:</strong>
+  <%= @parking.parkallowed %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @parking.datetime %>
+</p>
+
+<p>
+  <strong>Parkcompleted:</strong>
+  <%= @parking.parkcompleted %>
+</p>
+
+<p>
+  <strong>Getbikerequest:</strong>
+  <%= @parking.getbikerequest %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @parking.datetime %>
+</p>
+
+<p>
+  <strong>Getbikecompleted:</strong>
+  <%= @parking.getbikecompleted %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @parking.datetime %>
+</p>
+
+<%= link_to 'Edit', edit_parking_path(@parking) %> |
+<%= link_to 'Back', parkings_path %>
